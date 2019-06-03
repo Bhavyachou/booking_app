@@ -4,7 +4,7 @@
             {{research_save.start }}</h2>
         <div class="ui container">
             <div class="ui link cards">
-                <div class="card" v-for="r in rooms">
+                <div class="card" v-for="r in rooms" :key='r'>
                     <div class="image">
                         <img :src="'/img/'+ r._id +'.jpg'" >
                     </div>
