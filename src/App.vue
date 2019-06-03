@@ -1,38 +1,40 @@
 <template>
-  <v-app>
-    <v-toolbar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn
-        flat
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
-      </v-btn>
-    </v-toolbar>
-
-    <v-content>
-      <HelloWorld/>
-    </v-content>
-  </v-app>
+  <div class="center-box">
+    <div class="ui main container" style="background-color: white" id="app">
+      <search-engine></search-engine>
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld'
+import SearchEngine from "../src/components/SearchEngine";
 
 export default {
-  name: 'App',
+  name: 'app',
   components: {
-    HelloWorld
-  },
-  data () {
-    return {
-      //
-    }
+    SearchEngine
   }
 }
 </script>
+
+<style>
+  .main.container {
+    padding-top: 100px;
+  }
+  .head.item {
+    height: 50px;
+  }
+  .over-pink:hover {
+    background-color: deeppink;
+  }
+  .center-box {
+    width: 75%;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.66);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.66);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.66);
+  }
+</style>
